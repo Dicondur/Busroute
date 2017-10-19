@@ -1,0 +1,36 @@
+﻿@model BusService.Models.RouteStop
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RouteStop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OffsetMinutes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OffsetMinutes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BusRouteCodeNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusRouteCodeNavigation.BusRouteCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BusStopNumberNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusStopNumberNavigation.BusStopNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.RouteStopId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
